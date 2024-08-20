@@ -1,0 +1,12 @@
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    1. Create a StudentAttendee bean with id "student" and prototype scope.-->
+<!--    2. Create a GraduationCeremonyEvent bean with id "event" and inject the student bean in it using setter injection.-->
+		    <bean id = "student" class = "com.example.EventRegistration.StudentAttendee" scope = "prototype"></bean>
+			<bean id = "event" class = "com.example.EventRegistration.GraduationCeremonyEvent">
+				<property name="attendee" ref = "student"></property>
+			</bean>
+</beans>

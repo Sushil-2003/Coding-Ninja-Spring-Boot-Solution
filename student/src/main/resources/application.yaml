@@ -1,0 +1,8 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/studentdb
+    username: root
+    password: Sushil@2003
+  jpa:
+    properties.hibernate-dialect: org.hibernate.dialect.MySQLDialect
+    hibernate.dDL-AUTO: update

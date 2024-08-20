@@ -1,0 +1,45 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--        Recipe beans -->
+    <bean id="northIndianLentils" class="com.example.TastyTrove.NorthIndian" >
+        <property ref="lentils" name="ingredients"/>
+    </bean>
+    <bean id="northIndianRice" class="com.example.TastyTrove.NorthIndian" >
+        <property ref="rice" name="ingredients"/>
+    </bean>
+    <bean id="northIndianWheat" class="com.example.TastyTrove.NorthIndian" >
+        <property ref="wheat" name="ingredients"/>
+    </bean>
+
+
+    <bean id="southIndianLentils" class="com.example.TastyTrove.SouthIndian" >
+        <property ref="lentils" name="ingredients"/>
+    </bean>
+    <bean id="southIndianRice" class="com.example.TastyTrove.SouthIndian" >
+        <property ref="rice" name="ingredients"/>
+    </bean>
+    <bean id="southIndianWheat" class="com.example.TastyTrove.SouthIndian" >
+        <property ref="wheat" name="ingredients"/>
+    </bean>
+
+
+    <bean id="chineseLentils" class="com.example.TastyTrove.Chinese" >
+    <property ref="lentils" name="ingredients"/>
+    </bean>
+    <bean id="chineseRice" class="com.example.TastyTrove.Chinese" >
+        <property ref="rice" name="ingredients"/>
+    </bean>
+    <bean id="chineseWheat" class="com.example.TastyTrove.Chinese" >
+        <property ref="wheat" name="ingredients"/>
+    </bean>
+
+
+
+<!--    Define beans of ingredient types-->
+    <bean id="lentils" class="com.example.TastyTrove.Lentils"/>
+    <bean id="rice" class="com.example.TastyTrove.Rice"/>
+    <bean id="wheat" class="com.example.TastyTrove.Wheat "/>
+
+</beans>

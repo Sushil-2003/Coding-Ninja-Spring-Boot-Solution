@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!-- Types of instructors -->
+    <bean class="com.sushil9.codingninijaAppDemo.JavaInstructor"
+          id="javaInstructor" init-method="init" destroy-method="destroy"></bean>
+    <bean class="com.sushil9.codingninijaAppDemo.SpringInstructor"
+          id="springInstructor" init-method="init" destroy-method="destroy"></bean>
+
+    <!-- User list interface with the SimpleUserList class -->
+    <bean class="com.sushil9.codingninijaAppDemo.SimpleUserList" id="userList" scope="prototype">
+    </bean>
+
+    <!-- Types of courses -->
+    <bean class="com.sushil9.codingninijaAppDemo.PaidCourse" id="javaCourse">
+        <constructor-arg ref="javaInstructor" />
+        <constructor-arg ref="userList" />
+    </bean>
+    <bean class="com.sushil9.codingninijaAppDemo.PaidCourse" id="springCourse">
+        <constructor-arg ref="springInstructor" />
+        <constructor-arg ref="userList" />
+    </bean>
+
+    <bean class="com.sushil9.codingninijaAppDemo.SimpleUser" scope="prototype" id="simpleUser"></bean>
+
+</beans>

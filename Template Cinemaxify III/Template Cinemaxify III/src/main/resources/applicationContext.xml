@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- You need to replace the constructor-arg tag with property tag for setter injection   -->
+
+    <bean id="normal" class="com.example.Cinemaxify.NormalPlan" />
+    <bean id="premium" class="com.example.Cinemaxify.PremiumPlan" />
+
+    <bean id="selfNormal" class="com.example.Cinemaxify.Self" >
+        <property name="plan" ref = "normal"></property>
+    </bean>
+
+    <bean id="selfPremium" class="com.example.Cinemaxify.Self" >
+        <property name="plan" ref = "premium"></property>
+    </bean>
+
+    <bean id="spouseNormal" class="com.example.Cinemaxify.Spouse" >
+       <property name="plan" ref = "normal"></property>
+    </bean>
+
+    <bean id="spousePremium" class="com.example.Cinemaxify.Spouse">
+               <property name="plan" ref = "premium"></property>
+    </bean>
+
+</beans>

@@ -1,0 +1,13 @@
+package com.sushil8.appApplicationdemo;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class AppApplicationdemoApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(AppApplicationdemoApplication.class, args);
+	}
+
+}

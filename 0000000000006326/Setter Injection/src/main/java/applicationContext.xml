@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+      <!-- bean definitions here --> 
+    <bean id="normalTyre" class="com.codingNinjas.carDealership.NormalTyre" />
+    <bean id="SportsTyre" class="com.codingNinjas.carDealership.SportsTyre" />
+    <bean id="HeavyTyre" class="com.codingNinjas.carDealership.HeavyTyre" />
+    <bean id="familyCarNormalTyre" class="com.codingNinjas.carDealership.FamilyCar">
+     <constructor-arg ref="normalTyre" />
+    </bean>
+    <bean id="familyCarSportsTyre" class="com.codingNinjas.carDealership.FamilyCar">
+     <constructor-arg ref="SportsTyre" />
+    </bean>
+    <bean id="sportsCarSportsTyre" class="com.codingNinjas.carDealership.SportsCar">
+          <property name="tyre" ref="SportsTyre" />
+    </bean>
+    <bean id="sportsCarHeavyTyre" class="com.codingNinjas.carDealership.SportsCar">
+          <property name="tyre" ref="HeavyTyre" />
+    </bean>
+    <bean id="truck" class="com.codingNinjas.carDealership.Truck">
+          <property name="tyre" ref="HeavyTyre" />
+    </bean>
+
+</beans>

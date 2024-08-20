@@ -1,0 +1,16 @@
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="event" class="com.example.EventRegistration.GraduationCeremonyEvent" init-method = "init" destroy-method = "destroy">
+        <property name="attendee" ref="student" />
+    </bean>
+
+    <bean id="student" class="com.example.EventRegistration.StudentAttendee" scope="prototype" init-method = "init" />
+
+    <bean id="college" class="com.example.EventRegistration.MyCollege" init-method = "init" destroy-method = "destroy">
+        <property name="event" ref="event" />
+    </bean>
+
+</beans>

@@ -1,0 +1,18 @@
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="event" class="com.example.EventRegistration.GraduationCeremonyEvent">
+        <property name="attendee" ref="student" />
+    </bean>
+
+    <bean id="student" class="com.example.EventRegistration.StudentAttendee" scope="prototype" />
+
+<!--    You only need to create a MyCollege bean with id "college" and
+        inject event bean using setter injection -->
+        <bean id = "college" class = "com.example.EventRegistration.MyCollege">
+			<property name="Event" ref = "event"></property>
+		</bean>
+
+</beans>

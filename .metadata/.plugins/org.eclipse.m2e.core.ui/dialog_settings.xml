@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="E:\my spring boot project\website"/>
+			<item value="E:\my spring boot project\Bank-Account-Registration-Template"/>
+			<item value="E:\my spring boot project\taxApplication"/>
+			<item value="E:\my spring boot project\testingSpringdemo"/>
+			<item value="E:\my spring boot project\TuneIn Template"/>
+			<item value="E:\my spring boot project\TastyTrove Template"/>
+			<item value="E:\my spring boot project\codingninijaAppDemo"/>
+			<item value="E:\my spring boot project\appApplicationdemo"/>
+			<item value="E:\my spring boot project\VaccinationTemplate"/>
+			<item value="E:\my spring boot project\codingNinjaApp (1)"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+</section>

@@ -1,0 +1,54 @@
+<!--Don't change the name of this file-->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+        <!--
+
+    *******************************************************************************************************************************************************
+                                    Bean definition for ingredients:
+
+                                        1.Bean id should be the same as class name but in camel-case naming convention.
+                                        2.Below is the sample for your reference.
+
+                                    <bean id="oil" class="com.example.TastyTrove.Ingredients.Oil"/>
+
+    *****************************************************************************************************************************************************
+                                    Bean definition for Recipes should follow camel case naming convention with below combination:
+
+                                        1. Bean id = recipeType + ingredient
+                                        2. Below is the sample for your reference.
+
+                                    <bean id="northIndianOil" class="com.example.TastyTrove.Recipes.NorthIndian">
+
+                                    Here northIndianOil is a combination of recipes and ingredients but in camel-case version.
+
+    *****************************************************************************************************************************************************
+    
+    -->
+    <bean id="lentils" class="com.example.TastyTrove.Lentils"/>
+    <bean id="rice" class="com.example.TastyTrove.Rice"/>
+    <bean id="wheat" class="com.example.TastyTrove.Wheat"/>
+
+    <!-- Recipe Beans -->
+    <bean id="chinese" class="com.example.TastyTrove.Chinese">
+        <property name="ingredients" ref="rice"/>
+    </bean>
+    <bean id="northIndian" class="com.example.TastyTrove.NorthIndian">
+        <property name="ingredients" ref="lentils"/>
+    </bean>
+    <bean id="southIndian" class="com.example.TastyTrove.SouthIndian">
+        <property name="ingredients" ref="wheat"/>
+    </bean>
+
+    <!-- Dishes -->
+    <bean id="chineseRice" class="com.example.TastyTrove.Chinese">
+        <property name="ingredients" ref="rice"/>
+    </bean>
+    <bean id="northIndianLentils" class="com.example.TastyTrove.NorthIndian">
+        <property name="ingredients" ref="lentils"/>
+    </bean>
+    <bean id="southIndianWheat" class="com.example.TastyTrove.SouthIndian">
+        <property name="ingredients" ref="wheat"/>
+    </bean>
+</beans>

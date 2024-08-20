@@ -1,0 +1,20 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+            <!--
+
+                 Instruction for writing bean defination:
+               
+               1. bean id should be same as class name but in camel-case naming convention.
+               2. below is an example for reference.
+                
+               <bean id="pfAccount" class="com.codingNinjas.Bank.Account.Registration.pfAccount">
+            -->
+		<bean id = "user" class = "com.codingNinjas.Bank.Account.Registration.myUser" 
+		scope = "singleton" init-method = "init" destroy-method = "destroy"/>
+		<bean id = "currentAccount" class = "com.codingNinjas.Bank.Account.Registration.currentAccount" 
+		scope = "prototype" init-method = "init"/>
+		<bean id = "savingsAccount" class = "com.codingNinjas.Bank.Account.Registration.savingsAccount" 
+		scope = "prototype" init-method = "init"/>
+</beans>

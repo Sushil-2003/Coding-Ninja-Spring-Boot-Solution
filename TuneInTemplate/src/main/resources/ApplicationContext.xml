@@ -1,0 +1,21 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+        <!--
+             Instruction for writing bean defination:
+               
+               1. bean id should be same as class name but in camel-case naming convention.
+               2. below is an example for reference.
+                
+               <bean id="myFriend" class="com.example.TuneIn.MyFriend"> 
+        -->
+        <bean id = "myUser" class = " com.example.TuneIn.MyUser" scope = "singleton">
+			<property name="playlist" ref = "myPlaylist"></property>
+		</bean>
+		<bean id = "myPlaylist" class = "com.example.TuneIn.MyPlaylist" scope = "singleton">
+			<property name="mySong" ref = "mySong"></property>
+		</bean>
+		<bean id = "mySong" class = "com.example.TuneIn.MySong" scope = "prototype" />
+
+</beans>

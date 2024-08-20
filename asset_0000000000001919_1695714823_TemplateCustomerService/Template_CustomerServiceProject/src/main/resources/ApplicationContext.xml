@@ -1,0 +1,16 @@
+<!--Don't change the name of this file-->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       
+       <!--
+                  # Writing Bean Definition Instructions:
+                   1. Bean id should be same as class name but in camel-case naming convention.
+
+            <bean id="sampleDepartment" class="com.example.sample.SampleDepartment"/>
+       -->
+
+
+
+
+</beans>

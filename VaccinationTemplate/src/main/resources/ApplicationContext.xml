@@ -1,0 +1,100 @@
+<!--Don't change the name of this file-->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--
+
+    *******************************************************************************************************************************************************
+                                    Bean definition for Vaccines:
+
+                                        1.Bean id should be the same as class name but in camel-case naming convention..
+                                        2.Below is the sample for your reference.
+
+                                    <bean id="tetanus" class="com.example.Vaccination.Tetanus"/>
+                                    
+
+    *****************************************************************************************************************************************************
+                                Bean definition for Users should follow camel case naming convention with below combination:
+
+                                        1. Bean id = UserType + Vaccine
+                                        2.Below is the sample for your reference.
+
+                                    <bean id="sisterTetanus" class="com.example.Vaccination.Sister">
+
+                                Here sisterTetanus is a combination of User and vaccine but in camel-case version.
+
+    *****************************************************************************************************************************************************
+
+                                Bean definition for TimeAndLocationBean class:
+                                        
+                                        1.Bean id should be the same as class name but in camel-case naming convention.
+                            
+    *****************************************************************************************************************************************************
+    -->
+    <bean id = "Covid" class="com.example.Vaccination.Covid"/>
+    <bean id = "Polio" class="com.example.Vaccination.Polio"/>
+    <bean id = "Typhoid" class="com.example.Vaccination.Typhoid"/>
+    <bean id = "timeAndLocation" class = "com.example.Vaccination.TimeAndLocation"/>
+    
+    <bean id="fatherCovid" class="com.example.Vaccination.Father">
+		<property name="timeAndLocation" ref = "timeAndLocation"></property>
+        <property name="vaccine" ref = "Covid"></property>
+    </bean>
+
+    <bean id="fatherPolio" class="com.example.Vaccination.Father">
+        <property name="timeAndLocation" ref = "timeAndLocation"></property>
+        <property name="vaccine" ref = "Polio"></property>
+    </bean>
+    
+     <bean id="fatherTyphoid" class="com.example.Vaccination.Father">
+        <property name="timeAndLocation" ref = "timeAndLocation"></property>
+        <property name="vaccine" ref = "Typhoid"></property>
+    </bean>
+    
+     <bean id="motherCovid" class="com.example.Vaccination.Mother">
+        <property name="timeAndLocation" ref = "timeAndLocation"></property>
+        <property name="vaccine" ref = "Covid"></property>
+    </bean>
+
+    <bean id="motherPolio" class="com.example.Vaccination.Mother">
+        <property name="timeAndLocation" ref = "timeAndLocation"></property>
+		<property name="vaccine" ref = "Polio"></property>
+    </bean>
+    
+     <bean id="motherTyphoid" class="com.example.Vaccination.Mother">
+        <property name="timeAndLocation" ref = "timeAndLocation"></property>
+        <property name="vaccine" ref = "Typhoid"></property>
+    </bean>
+    
+     <bean id="selfCovid" class="com.example.Vaccination.Self">
+        <property name="timeAndLocation" ref = "timeAndLocation"></property>
+        <property name="vaccine" ref = "Covid"></property>
+    </bean>
+
+    <bean id="selfPolio" class="com.example.Vaccination.Self">
+        <property name="timeAndLocation" ref = "timeAndLocation"></property>
+        <property name="vaccine" ref = "Polio"></property>
+    </bean>
+    
+     <bean id="selfTyphoid" class="com.example.Vaccination.Self">
+        <property name="timeAndLocation" ref = "timeAndLocation"></property>
+        <property name="vaccine" ref = "Typhoid"></property>
+    </bean>
+    
+     <bean id="spouseCovid" class="com.example.Vaccination.Spouse">
+        <property name="timeAndLocation" ref = "timeAndLocation"></property>
+        <property name="vaccine" ref = "Covid"></property>
+    </bean>
+
+    <bean id="spousePolio" class="com.example.Vaccination.Spouse">
+        <property name="timeAndLocation" ref = "timeAndLocation"></property>
+        <property name="vaccine" ref = "Polio"></property>
+    </bean>
+    
+     <bean id="spouseTyphoid" class="com.example.Vaccination.Spouse">
+        <property name="timeAndLocation" ref = "timeAndLocation"></property>
+        <property name="vaccine" ref = "Typhoid"></property>
+    </bean>
+
+</beans>
